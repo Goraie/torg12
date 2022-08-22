@@ -36,6 +36,13 @@ p{
 	height: 38px;
 	padding-top: 6px;
 }
+/* Можно закомментить, если не будет более 2-х строк текста */
+.header__left .header-el{
+	min-height: 38px;
+	height: auto;
+	align-items: center;
+}
+/*  */
 .header-el__title{
 	width: 143px;
 	height: 100%;
@@ -277,16 +284,18 @@ span::before{
 	 width: 350px;
 }
 .end-l__s span:first-of-type{
-	 width: 178px;
+	 min-width: 178px;
 }
 .end-l__s span:last-of-type{
 	 width: 34px;
 }
 .end-l__th span{
-	 width: 158px;
+	 min-width: 158px;
+	 max-width: 190px;
 }
 .end-l__frth span, .end-l__fv span, .end-r__from span{
-	 width: 144px;
+	 min-width: 144px;
+	 max-width: 201px;
 }
 .end-l__frth span:first-of-type{
 	margin-left: 100px;
