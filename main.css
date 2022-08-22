@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
 	color: #000;
 	width: 1561px;
 	height: 1109px;
@@ -52,7 +52,7 @@ p{
 	width: 1327px;
 	height: 100%;
 	border-bottom: 1px solid #000;
-	padding-bottom: 6px;
+	padding-bottom: 3px;
 }
 .header__w .header-el__text{
 	width: 985px;
@@ -79,6 +79,9 @@ p{
 .header-el__text.header-el__text_code{
 	border: none;
 	border-bottom: 1px solid #000;
+}
+.header-el__main{
+	height: 23px;
 }
 
 .invoice{
@@ -136,7 +139,7 @@ p{
 }
 
 .tab table{
-	margin-top: 34px;
+	margin-top: 20px;
 	border-collapse: collapse;
 	width: 100%;
 }
@@ -158,7 +161,7 @@ p{
 	border: none;
 }
 .cont{
-	margin-top: 25px;
+	margin-top: 18px;
 }
 .cont-el{
 	display: flex;
@@ -183,6 +186,7 @@ p{
 	text-align: center;
 }
 .cont-wf{
+	margin-top: 7px;
 	display: flex;
 	justify-content: space-between;
 	align-items: start;
@@ -297,9 +301,6 @@ span::before{
 	 min-width: 144px;
 	 max-width: 201px;
 }
-.end-l__frth span:first-of-type{
-	margin-left: 100px;
-}
 .end-r__num{
 	width: 140px;
 }
@@ -345,7 +346,7 @@ span.end-r__line{
 	margin-left: 0;
 	margin-top: 10px;
 }
-.end-r__from .span-registration{
+.end-r__from .span-registration, .end-l__th .span-registration, .end-l__frth .span-registration, .end-l__fv .span-registration{
 	margin-left: auto;
 }
 .footer{
