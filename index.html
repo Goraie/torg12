@@ -27,40 +27,46 @@
 		p{
 			display: block;
 		}
-
 		.header__w{
-			display: flex;
-			align-items: end;
+			display: table;
 		}
-
 		.header__title{
 			text-align: right;
 			font-size: 11px;
 			margin-bottom: 15px;
 		}
 		.header-el{
-			display: flex;
-			justify-content: space-between;
+			display: table;
 			height: 38px;
 			padding-top: 6px;
+		}
+		.header__right, .header__left{
+			display: table-cell;
 		}
 		/* Можно закомментить, если не будет более 2-х строк текста */
 		.header__left .header-el{
 			min-height: 38px;
 			height: auto;
-			align-items: center;
 		}
 		/*  */
 		.header-el__title{
+			display: table-cell;
 			width: 143px;
 			height: 100%;
 			padding-right: 2px;
 		}
 		.header-el__text{
-			width: 1327px;
+			display: table-cell;
+			width: 985px;
 			height: 100%;
 			border-bottom: 1px solid #000;
 			padding-bottom: 3px;
+		}
+		.header-el__main .header-el__title{
+			display: block;
+		}
+		.header-el__main .header-el__text{
+			width: 100%;
 		}
 		.header__w .header-el__text{
 			width: 985px;
@@ -69,8 +75,13 @@
 			width: 342px;
 			text-align: right;
 		}
+		.header__left{
+			vertical-align: bottom;
+			padding-bottom: 20px;
+		}
 		.header__right .header-el{
 			padding: 0;
+			margin-left: auto;
 		}
 		.header__right .header-el__title{
 			width: 202px;
@@ -93,8 +104,11 @@
 		}
 
 		.invoice{
-			display: flex;
-			align-items: end;
+			display: table;
+			width: 100%;
+		}
+		.invoice__title, .invoice__table, .invoice__w{
+			display: table-cell;
 		}
 		.invoice__title{
 			width: 288px;
@@ -119,11 +133,18 @@
 			font-size: 14px;
 			width: 186px;
 		}
+		.invoice__ww{
+			display: table-cell;
+			vertical-align: top;
+		}
 		.invoice__w{
 			width: 527px;
-			display: flex;
-			align-items: center;
-			margin-left: 42px;
+			display: table;
+			margin-left: auto;
+		}
+		.invoice__text-w{
+			display: table-cell;
+			vertical-align:	middle;
 		}
 		.invoice__ws{
 			width: 340px;
@@ -172,18 +193,31 @@
 			margin-top: 18px;
 		}
 		.cont-el{
-			display: flex;
-			align-items: center;
+			display: table;
 		}
 		.cont p{
-			display: flex;
-			align-items: flex-end;
+			display: table;
+		}
+		.cont-el p, .cont-el div, .cont-wf__el p{
+			display: table-cell;
+		}
+		.cont-el__mar{
+			margin-left: 8px;
 		}
 		.cont span, .end span, .footer span{
 			height: 1px;
+			display: table-cell;
 			border-bottom: 1px solid #000;
-			margin: 0 4px;
-			margin-bottom: 4px;
+			position: relative;
+			bottom: 5px;
+			left: 4px;
+		}
+		span.cont-el__span{
+			display: block;
+			position: relative;
+			bottom: 0;
+			left: 0;
+			margin: 0 4px 4px;
 			padding-bottom: 12px;
 		}
 		.cont-el__span:first-of-type{
@@ -199,6 +233,9 @@
 			justify-content: space-between;
 			align-items: start;
 		}
+		.cont-wf__el{
+			height: 38px;
+		}
 		.cont-wf__text{
 			margin-top: 12px;
 			display: flex;
@@ -213,9 +250,13 @@
 		.span-registration, .span-post, .span-decoding, .span-{
 			display: flex;
 			justify-content: center;
+			text-align-last: center;
+			vertical-align: bottom;
 		}
 		span::before{
 			margin-top: 14px;
+			top: 10px;
+			position: relative;
 		}
 		.span-registration::before{
 			content: '(прописью)';
@@ -408,8 +449,8 @@
 			</div>
 			<div class="header__right">
 				<div class="header-el">
-					<p class="header-el__title"></p>
-					<p class="header-el__text header-el__text_code">Код</p>
+					<p class="header-el__title">&nbsp;</p>
+					<p class="header-el__text header-el__text_code">код</p>
 				</div>
 				<div class="header-el">
 					<p class="header-el__title">Форма по ОКУД</p>
@@ -450,22 +491,26 @@
 				<td>25.11.2021</td>
 			</tr>
 		</table>
-		<div class="invoice__w">
-			<p class="invoice__text">Транспортная накладная</p>
-			<table class="invoice__ws">
-				<tr class="invoice-el">
-					<td class="invoice-el__title">номер</td>
-					<td class="invoice-el__text"></td>
-				</tr>
-				<tr class="invoice-el">
-					<td class="invoice-el__title">дата</td>
-					<td class="invoice-el__text"></td>
-				</tr>
-				<tr class="invoice-el">
-					<td class="invoice-el__title">Вид операции:</td>
-					<td class="invoice-el__text"></td>
-				</tr>
-			</table>
+		<div class="invoice__ww">
+			<div class="invoice__w">
+				<div class="invoice__text-w">
+					<p class="invoice__text">Транспортная накладная</p>
+				</div>
+				<table class="invoice__ws">
+					<tr class="invoice-el">
+						<td class="invoice-el__title">номер</td>
+						<td class="invoice-el__text"></td>
+					</tr>
+					<tr class="invoice-el">
+						<td class="invoice-el__title">дата</td>
+						<td class="invoice-el__text"></td>
+					</tr>
+					<tr class="invoice-el">
+						<td class="invoice-el__title">Вид операции:</td>
+						<td class="invoice-el__text"></td>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</section>
 	<section class="tab">
@@ -569,23 +614,23 @@
 		</table>
 	</section>
 	<section class="cont">
-		<p class="cont-el">
-			Товарная накладная имеет приложение на <span class="cont-el__span"></span> листах и содержит <span class="cont-el__span">Два</span> порядковых номеров записей.
-		</p>
+		<div class="cont-el">
+			<p>Товарная накладная имеет приложение на</p>
+			<div><span class="cont-el__span"></span></div>
+			<p class="cont-el__mar">листах и содержит</p>
+			<div><span class="cont-el__span">Два</span></div>
+			<p class="cont-el__mar">	порядковых номеров записей.</p>
+		</div>
 		<div class="cont-wf">
 			<p class="cont-wf__text">
 				Всего мест <span class="span-registration"></span>
 			</p>
 			<div class="cont-wf__w">
 				<div class="cont-wf__el">
-					<p>
-						Масса груза (нетто) <span class="span-registration"></span>
-					</p>
+					<p> Масса груза (нетто) </p><span class="span-registration"></span>
 				</div>
 				<div class="cont-wf__el">
-					<p>
-					Масса груза (брутто) <span class="span-registration"></span>
-					</p>
+					<p> Масса груза (брутто) </p><span class="span-registration"></span>
 				</div>
 			</div>
 		</div>
