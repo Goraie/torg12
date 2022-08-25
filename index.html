@@ -33,22 +33,19 @@
 		.header__title{
 			text-align: right;
 			font-size: 11px;
-			margin-bottom: 15px;
 		}
 		.header-el{
 			display: table;
-			height: 38px;
-			padding-top: 6px;
+			height: 35px;
+			padding-top: 4px;
 		}
 		.header__right, .header__left{
 			display: table-cell;
 		}
-		/* Можно закомментить, если не будет более 2-х строк текста */
 		.header__left .header-el{
 			min-height: 38px;
 			height: auto;
 		}
-		/*  */
 		.header-el__title{
 			display: table-cell;
 			width: 143px;
@@ -77,7 +74,6 @@
 		}
 		.header__left{
 			vertical-align: bottom;
-			padding-bottom: 20px;
 		}
 		.header__right .header-el{
 			padding: 0;
@@ -190,12 +186,43 @@
 			border: none;
 		}
 		.cont{
-			margin-top: 18px;
+			margin-top: 10px;
 		}
 		.cont-el{
 			display: table;
 		}
-		.cont p{
+		.cont-el-one{
+			width: 1320px;
+			text-align: center;
+		}
+		.cont-el-one .cont-el__span{
+			width: 100%;
+		}
+		.p1{
+			text-align-last: left;
+		}
+		.cont-el-one div:first-of-type{
+				width: 556px;
+				padding: 0 8px;
+		}
+		.cont-el-one div:first-of-type .cont-el__span{
+				width: 556px;
+				margin: 0;
+				text-align: center;
+		}
+		.cont-el-one div:last-of-type{
+				width: 80px;
+				padding: 0 8px;
+		}
+		.cont-el-one div:last-of-type .cont-el__span{
+				width: 80px;
+				margin: 0;
+				text-align: center;
+		}
+		.p1{
+			width: 275px;
+		}
+		.cont p, .end p{
 			display: table;
 		}
 		.cont-el p, .cont-el div, .cont-wf__el p{
@@ -229,17 +256,18 @@
 		}
 		.cont-wf{
 			margin-top: 7px;
-			display: flex;
-			justify-content: space-between;
-			align-items: start;
+			width: 100%;
+			display: table;
 		}
 		.cont-wf__el{
 			height: 38px;
+			margin-left: auto;
+		}
+		.cont-wf__w{
+			display: table-cell;
 		}
 		.cont-wf__text{
 			margin-top: 12px;
-			display: flex;
-			align-items: center;
 		}
 		.cont-wf__text span{
 			width: 558px;
@@ -248,8 +276,6 @@
 			font-size: 8px;
 		}
 		.span-registration, .span-post, .span-decoding, .span-{
-			display: flex;
-			justify-content: center;
 			text-align-last: center;
 			vertical-align: bottom;
 		}
@@ -271,41 +297,38 @@
 			width: 692px;
 		}
 		.cont-wf__el p{
-			justify-content: space-between;
-		}
-		.cont-wf__el div{
-			display: flex;
-			align-items: end;
+			width: 147px;
 		}
 		.cont-wf__el span{
 			margin: 0 0 7px 0;
 		}
-		.cont-wf__el .span-registration::after{
-			content: '';
-			border: 1px solid #000;
-			width: 210px;
-			height: 28px;
-			position: absolute;
-			bottom: -1px;
-			left: 311px;
+		.cont-wf__el div{
+			display: table-cell;
 		}
 		.cont-wf__el .span-registration::before{
 			margin-top: 28px;
 		}
 		.cont-wf__el .span-registration{
-			position: relative;
-			width: 312px;
+			width: 332px;
 			height: 28px;
 			margin-left: 42px;
 			margin-right: 210px;
 		}
+		.cont-wf__el .span-square{
+			content: '';
+			border: 1px solid #000;
+			width: 210px;
+			height: 28px;
+		}
 		.end{
-			display: flex;
-			margin-top: 15px;
+			display: table;
+			margin-top: 5px;
+			width: 100%;
 		}
 		.end-l, .end-r{
+			display: table-cell;
 			width: 50%;
-			padding-bottom: 30px;
+			padding-bottom: 0;
 		}
 		.end-l{
 			border-right: 1px solid #000;
@@ -315,8 +338,6 @@
 			padding-left: 15px;
 		}
 		.end p{
-			display: flex;
-			align-items: end;
 			margin-top: 15px;
 		}
 		.end p:first-of-type{
@@ -327,14 +348,54 @@
 			border-bottom: 1px solid #000;
 			margin: 0 4px;
 			margin-bottom: 4px;
-			padding-bottom: 12px;
+			padding-bottom: 0;
 			text-align: center;
 		}
 		.end-l p{
 			margin-bottom: 8px;
 		}
+		.end-l__f,.end-l__s,.end-l__th,.end-l__frth{
+			margin-bottom: 20px;
+		}
 		.end-l__f span{
 			width: 350px;
+		}
+		.end-l__th p{
+			display: table-cell;
+			width: 210px;
+		}
+		.end-l__tab{
+			display: table;
+			margin-left: auto;
+		}
+		.end-l__th-m{
+			display: table-cell;
+			width: 510px;
+		}
+		.end-l__wrapper{
+			display: table-cell;
+			padding: 0 4px;
+		}
+		.end-l__f p, .end-l__f div, .end-l__s p, .end-l__s div {
+			display: table-cell;
+		}
+		.end-l__f span,.end-l__s span{
+			display: block;
+			position: relative;
+			bottom: 0;
+			left: 0;
+			margin: 0 4px 4px;
+			padding-bottom: 12px;
+		}
+		.end-r__text{
+			min-width: 110px;
+		}
+		.end-r .end-l__th{
+			display: table;
+		}
+		.end-r .end-l__mar{
+			width: 20px;
+			padding-left: 8px;
 		}
 		.end-l__s span:first-of-type{
 			min-width: 178px;
@@ -353,75 +414,106 @@
 		.end-r__num{
 			width: 140px;
 		}
+		.end-r .end-r__num{
+			width: 140px;
+			min-width: 140px;
+		}
+		.end-l__wrapper{
+			display: table-cell;
+		}
+		.end-r__w{
+			padding: 0 12px;
+		}
+		.end-r .end-l__tab{
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.end-r .end-l__tab{
+			vertical-align: middle;
+		}
+		.end-r__wrapper{
+			display: table-cell;
+			padding: 0 8px;
+		}
 		span.span__day{
-			width: 40px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			margin-bottom: 0;
+			min-width: 40px;
+			max-width: 0;
 			position: relative;
 			margin-left: 8px;
 			margin-right: 6px;
 		}
-		.span__day::before{
-			content: '«';
-			position: absolute;
-			bottom: -5px;
-			left: -8px;
-			font-size: 13px;
-		}
 		.span__day::after{
 			content: '»';
 			font-size: 13px;
-			bottom: -5px;
 			position: absolute;
+			display: block;
+			bottom: -5px;
 			right: -8px;
 		}
+		.span__day::before{
+			content: '«';
+			font-size: 13px;
+			position: absolute;
+			display: block;
+			top: -9px;
+			left: -8px;
+		}
 		span.span__mounths{
-			width: 160px;
+			min-width: 160px;
+			max-width: 0;
 			margin-right: 0;
 		}
 		span.span__years{
+			min-width: 40px;
+			max-width: 0;
 			margin-right: 6px;
-			width: 42px;
 		}
 		span.end-r__who{
-			width: 570px;
+			width: 640px;
 			margin-left: 8px;
 		}
-		span.end-r__line{
-			width: 100%;
-			display: block;
-			margin-right: 0;
-			margin-left: 0;
+		.end-l__th{
+			margin-top: 20px;
+		}
+		.end-r__line-p{
+			height: 14px;
 			margin-top: 10px;
+			width: 100%;
+			border-bottom: 1px solid #000;
 		}
 		.end-r__from .span-registration, .end-l__th .span-registration, .end-l__frth .span-registration, .end-l__fv .span-registration{
 			margin-left: auto;
 		}
 		.footer{
 			padding-top: 10px;
-			height: 98px;
-			display: flex;
-			flex-direction: column;
+			height: 60px;
+			position: relative;
 		}
 		.footer__w{
-			display: flex;
+			display: table;
+			width: 100%;
 		}
 		.footer-r, .footer-l{
+			padding: 0 50px;
 			width: 50%;
-			display: flex;
+			display: table-cell;
 			justify-content: center;
 			text-align: center;
 		}
 		.footer .span__day{
 			margin-left: 140px;
 		}
-		.footer p{
-			display: flex;
-		}
 		.footer__end{
-			margin-top: auto;
-			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+		.footer .end-l__mar, .footer .end-r__text{
+			width: 40px;
+		}
+		.footer .end-l__tab{
+			margin-right: auto;
 		}
 	</style>
 </head>
@@ -614,12 +706,12 @@
 		</table>
 	</section>
 	<section class="cont">
-		<div class="cont-el">
-			<p>Товарная накладная имеет приложение на</p>
+		<div class="cont-el cont-el-one">
+			<p class="p1">Товарная накладная имеет приложение на</p>
 			<div><span class="cont-el__span"></span></div>
 			<p class="cont-el__mar">листах и содержит</p>
 			<div><span class="cont-el__span">Два</span></div>
-			<p class="cont-el__mar">	порядковых номеров записей.</p>
+			<p class="cont-el__mar">порядковых номеров записей.</p>
 		</div>
 		<div class="cont-wf">
 			<p class="cont-wf__text">
@@ -627,56 +719,130 @@
 			</p>
 			<div class="cont-wf__w">
 				<div class="cont-wf__el">
-					<p> Масса груза (нетто) </p><span class="span-registration"></span>
+					<p> Масса груза (нетто) </p>
+					<div>
+						<span class="span-registration"></span>
+						<span class="span-square"></span>
+					</div>
 				</div>
 				<div class="cont-wf__el">
-					<p> Масса груза (брутто) </p><span class="span-registration"></span>
+					<p> Масса груза (брутто) </p>
+					<div>
+						<span class="span-registration"></span>
+						<span class="span-square"></span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="end">
 		<div class="end-l">
-			<p class="end-l__f">
-				Приложение (паспорта, сертификаты и т.п) на <span class="span-registration"></span>листах
-			</p>
-			<p class="end-l__s">
-				Всего отпущено на сумму <span>Семь тысяч шестьдесят</span> руб. <span>00</span> коп.
-			</p>
-			<p class="end-l__th">
-				Отпуск груза разрешил <span class="span-registration"></span><span class="span-post"></span><span class="span-decoding"></span>
-			</p>
-			<p class="end-l__frth">
-				Главный (старший) бухгалтер <span class="span-registration"></span></span><span class="span-decoding"></span>
-			</p>
-			<p class="end-l__fv">
-				Отпуск груза произвёл <span class="span-registration"></span><span class="span-post"></span><span class="span-decoding"></span>
-			</p>
+			<div class="end-l__f">
+				<p>Приложение (паспорта, сертификаты и т.п) на </p>
+				<div><span class="end-l__span"></span></div>
+				<p class="end-l__mar">листах</p>
+			</div>
+			<div class="end-l__s">
+				<p>Всего отпущено на сумму</p>
+				<div><span class="end-l__span">Семь тысяч шестьдесят</span></div>
+				<p class="end-l__mar">руб. </p>
+				<div><span class="cont-el__span">00</span></div>
+				<p class="cont-el__mar">коп.</p>
+			</div>
+			<div class="end-l__th">
+				<p>Отпуск груза разрешил</p>
+				<div class="end-l__th-m" >
+					<div class="end-l__tab">
+						<div class="end-l__wrapper"><span class="span-registration"></span></div>
+						<div class="end-l__wrapper"><span class="span-post"></span></div>
+						<div class="end-l__wrapper"><span class="span-decoding"></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="end-l__th">
+				<p>Главный (старший) бухгалтер</p>
+				<div class="end-l__th-m" >
+					<div class="end-l__tab">
+						<div class="end-l__wrapper"><span class="span-registration"></span></div>
+						<div class="end-l__wrapper"><span class="span-decoding"></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="end-l__th">
+				<p>Отпуск груза произвёл</p>
+				<div class="end-l__th-m" >
+					<div class="end-l__tab">
+						<div class="end-l__wrapper"><span class="span-registration"></span></div>
+						<div class="end-l__wrapper"><span class="span-post"></span></div>
+						<div class="end-l__wrapper"><span class="span-decoding"></span></div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="end-r">
-			<p>
-				По договоренности № <span class="end-r__num"></span> от <span class="span__day"></span><span class="span__mounths"></span><span class="span__years"></span> года
-			</p>
+			<div class="end-l__th">
+				<p class="end-r__text">По договоренности №</p>
+				<div class="end-r__w"><span class="end-r__num"></span></div>
+				<p class="end-l__mar">от</p>
+				<div class="end-l__th-m" >
+					<div class="end-l__tab">
+						<div class="end-r__wrapper"><span class="span__day">1</span></div>
+						<div class="end-r__wrapper"><span class="span__mounths"></span></div>
+						<div class="end-r__wrapper"><span class="span__years"></span></div>
+						<p class="end-l__mar">года</p>
+					</div>
+				</div>
+			</div>
 			<p>
 				выданной <span class="end-r__who"></span>
 			</p>
-			<span class="end-r__line"></span>
-			<span class="end-r__line"></span>
-			<p class="end-r__from">
-				Груз принял <span class="span-registration"></span><span class="span-post"></span><span class="span-decoding"></span>
-			</p>
-			<p class="end-r__from">
-				Груз получил <span class="span-registration"></span><span class="span-post"></span><span class="span-decoding"></span>
-			</p>
+			<p class="end-r__line-p"></p>
+			<p class="end-r__line-p"></p>
+			<div class="end-l__th">
+				<p>Груз принял</p>
+				<div class="end-l__th-m" >
+					<div class="end-l__tab">
+						<div class="end-l__wrapper"><span class="span-registration"></span></div>
+						<div class="end-l__wrapper"><span class="span-post"></span></div>
+						<div class="end-l__wrapper"><span class="span-decoding"></span></div>
+					</div>
+				</div>
+			</div>
+			<div class="end-l__th">
+				<p>Отпуск груза произвёл</p>
+				<div class="end-l__th-m" >
+					<div class="end-l__tab">
+						<div class="end-l__wrapper"><span class="span-registration"></span></div>
+						<div class="end-l__wrapper"><span class="span-post"></span></div>
+						<div class="end-l__wrapper"><span class="span-decoding"></span></div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 	<footer class="footer">
 		<div class="footer__w">
-			<div class="footer-l">
-				<p>М.П.<span class="span__day"></span><span class="span__mounths"></span><span class="span__years"></span></p>
+			<div class="footer-l end-l__th">
+				<p class="end-r__text">М.П.</p>
+				<div class="end-l__th-m" >
+					<div class="end-l__tab">
+						<div class="end-r__wrapper"><span class="span__day">1</span></div>
+						<div class="end-r__wrapper"><span class="span__mounths">Апрель</span></div>
+						<div class="end-r__wrapper"><span class="span__years">2021</span></div>
+						<p class="end-l__mar">года</p>
+					</div>
+				</div>
 			</div>
-			<div class="footer-r">
-				<p>М.П.<span class="span__day"></span><span class="span__mounths"></span><span class="span__years"></span></p>
+			<div class="footer-r end-l__th">
+				<p class="end-r__text">М.П.</p>
+				<div class="end-l__th-m" >
+					<div class="end-l__tab">
+						<div class="end-r__wrapper"><span class="span__day">1</span></div>
+						<div class="end-r__wrapper"><span class="span__mounths">1</span></div>
+						<div class="end-r__wrapper"><span class="span__years">1</span></div>
+						<p class="end-l__mar">года</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<p class="footer__end">
